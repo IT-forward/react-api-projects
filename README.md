@@ -1,2 +1,22 @@
 # react-api-projects
-Here students design and build their own projects using React hooks and API services
+
+1. Ushbu reponi kompyuteringizga clone qilib oling.
+2. O'z ismingiz bilan yangi `branch` oching.
+3. Repozitory ichida yangi react app yaratib shuning ichida saqlang.
+4. Github'ga push qilib PR yaratish esingizdan chiqmasin.
+
+### Loyihaga talablar:
+
+**1. Min:**
+
+- Boshqalarning qilgan ishiga (video yoki maqolalarga) qaramasdan React bilan mustaqil kamida 1 ta app yoki o’yin tayyorlash.
+- React class componentlardanmas, Function componentlar bilan kod yozishi va state o’rniga hook’larni ishlatishi: https://reactjs.org/docs/hooks-intro.html
+- Loyiha kamida 5 ta component’dan iborat bo’lishi.
+- Bootstrap CSS framework ishlatish.
+- Har bir proyekt Github’ga yuklab borilgan bo’lishi.
+
+**2. Max:**
+
+- API servislardan foydalanish: https://github.com/public-apis/public-apis
+- Test yozish: https://reactjs.org/docs/testing.html
+- PropTypes ishlatish: https://reactjs.org/docs/typechecking-with-proptypes.html
