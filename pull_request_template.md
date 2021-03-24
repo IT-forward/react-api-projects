@@ -10,7 +10,7 @@ _Bu yerda loyihangiz nimadan iboratligi va uni qanday ishlatish haqida ma'lumot 
 - [ ] React class componentlardanmas, Function componentlar bilan kod yozishi va state o’rniga hook’larni ishlatishi: https://reactjs.org/docs/hooks-intro.html
 - [ ] Loyiha kamida 5 ta component’dan iborat bo’lishi.
 - [ ] Bootstrap CSS framework ishlatish.
-- [ ] Har bir proyekt Github’ga yuklab borilgan bo’lishi.
+- [ ] Har bir proyekt Github’ga yuklab borilgan bo’lishi va README yozilgan bo'lishi.
 
 **2. Max:**
 

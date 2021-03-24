@@ -2,7 +2,7 @@
 
 1. Ushbu reponi kompyuteringizga clone qilib oling.
 2. O'z ismingiz bilan yangi `branch` oching.
-3. Repozitory ichida yangi react app yaratib shuning ichida saqlang.
+3. Repozitory ichida yangi ismingiz bilan react app yarating.
 4. Github'ga push qilib PR yaratish esingizdan chiqmasin.
 
 ### Loyihaga talablar:
@@ -13,7 +13,7 @@
 - React class componentlardanmas, Function componentlar bilan kod yozishi va state o’rniga hook’larni ishlatishi: https://reactjs.org/docs/hooks-intro.html
 - Loyiha kamida 5 ta component’dan iborat bo’lishi.
 - Bootstrap CSS framework ishlatish.
-- Har bir proyekt Github’ga yuklab borilgan bo’lishi.
+- Har bir proyekt Github’ga yuklab borilgan bo’lishi va README yozilgan bo'lishi.
 
 **2. Max:**
 
