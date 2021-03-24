@@ -1,4 +1,4 @@
-# react-api-projects
+# 22-28 Mart hafta uchun vazifa
 
 1. Ushbu reponi kompyuteringizga clone qilib oling.
 2. O'z ismingiz bilan yangi `branch` oching.
