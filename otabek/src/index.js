@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import SearchMovies from "./SearchMovies";
+import SearchMovies from "./components/SearchMovies";
 
 export const Main = () => {
   return (
