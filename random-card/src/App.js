@@ -22,10 +22,12 @@ function RandomUser() {
     }
   }
 
+
   useEffect(() => {
     profileData();
   },[]);
 
+  
   return <div className="App">
     <button onClick={() => profileData()}>Tasodifiy Odam</button>
     <div className="card">
