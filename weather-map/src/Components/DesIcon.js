@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import ModerateRain from './Icons/ModerateRain';
 import Rain from './Icons/Rain';
 import Cloud from './Icons/Cloud';
 import ClearSky from './Icons/ClearSky';
 import Sunny from './Icons/Sunny';
+import PropTypes from 'prop-types';
+
+DesIcon.propTypes = {
+    Description: PropTypes.string.isRequired,
+}
 
 function DesIcon(props) {
     const [icon, setIcon] = useState(null);
@@ -43,10 +47,6 @@ function DesIcon(props) {
             <div>{icon}</div>
         </div>
     );
-}
-
-DesIcon.propTypes = {
-    Description: PropTypes.string.isRequired,
 }
 
 export default DesIcon;

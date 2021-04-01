@@ -39,7 +39,7 @@ function Response(props) {
     return (
         <div className="d-flex justify-content-center w-50 mx-auto mt-5">
             <div className="d-flex flex-column align-items-center">
-                <h1 className="text-danger text-center">{cityName}</h1>
+                {/* <h1 className="text-danger text-center">{cityName}</h1> */}
                 <h1 className="text-secondary text-center">{temp}</h1>
                 <h2 className="text-secondary text-center">{description}</h2>
                 <DesIcon Description={description} />

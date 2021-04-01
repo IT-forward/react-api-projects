@@ -17,7 +17,7 @@ afterEach(() => {
 
 it('renders weather info', async () => {
     const fakeInfo = {
-        temp: '30',
+        temp: '30°C',
         des: 'sunny',
     }
 
@@ -27,12 +27,18 @@ it('renders weather info', async () => {
         })
     );
 
+    // working test
+    await act(async () => {
+        render(<Response />, container);
+    });
+    expect(container.querySelector('h1').textContent).toBe('');
+    expect(container.querySelector('h2').textContent).toBe('');
+
+    // not working test
     await act(async () => {
         render(<Response cityName='tashkent' />, container);
     });
-
-    console.log(fakeInfo.temp);
-    expect(container.querySelector("h1").textContent).toBe(fakeInfo.temp);
+    expect(container.querySelector('h1').textContent).toBe(fakeInfo.temp);
     expect(container.querySelector('h2').textContent).toBe(fakeInfo.des);
 
     global.fetch.mockRestore();

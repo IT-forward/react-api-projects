@@ -15,6 +15,7 @@ afterEach(() => {
     container = null;
 });
 
+// working test
 it('renders with or without a header', () => {
     act(() => {
         render(<Header />, container);
