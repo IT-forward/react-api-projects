@@ -12,7 +12,7 @@ export default function Form(props) {
         name="query"
         placeholder="i.e. Harry Potter"
         value={props.query}
-        onChange={(e) => props.setQuery(e.target.value)}
+        onChange={(e) => props.onChange(e.target.value)}
       ></input>
       <button className="button" type="submit">
         Search
