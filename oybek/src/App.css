@@ -1,0 +1,17 @@
+header {
+  background-color: black;
+  color: white;
+  padding: 15px;
+}
+
+
+.cardImg {
+  height: 300px;
+}
+
+@media screen and (max-width: 1100px) {
+
+  .cardImg {
+    height: 200px;
+  }
+}
