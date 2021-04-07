@@ -14,50 +14,31 @@ describe("SearchMovies", () => {
     const card = screen.queryByText("RELEASE DATE");
     expect(card).toBe(null);
   });
+
   test("calls the onSubmit callback function", () => {
     const onSubmit = jest.fn();
-    render(<Form onSubmit={onSubmit} />);
+    const setQuery = jest.fn();
+
+    render(<Form onSubmit={onSubmit} setQuery={setQuery} />);
 
     fireEvent.change(screen.getByRole("textbox"), {
       target: { value: "Star Wars" },
     });
     fireEvent.click(screen.getByRole("button"));
 
-    expect(onSubmit).toHaveBeenCalledTimes(1);
+    expect(setQuery).toHaveBeenCalled();
+    expect(onSubmit).toHaveBeenCalled();
   });
 
   test("calls the onChange callback function", () => {
-    const onChange = jest.fn();
+    const setQuery = jest.fn();
 
-    render(<Form onChange={onChange} />);
+    render(<Form setQuery={setQuery} />);
 
     fireEvent.change(screen.getByRole("textbox"), {
-      target: { value: "Star Wars" },
+      target: { value: "Harry Potter" },
     });
 
-    expect(onChange).toHaveBeenCalledTimes(1);
+    expect(setQuery).toHaveBeenCalled();
   });
 });
-
-// test("input value is updated correctly", () => {
-//     render(<Search />);
-
-//     const input = screen.getByRole('textbox');
-//     UserEvent.type(input, 'Uzbekistan');
-
-//     expect(input.value).toBe('Uzbekistan');
-// });
-
-// test("calls the onChange callback handler", () => {
-//     const onChange = jest.fn();
-
-//     render(
-//         <Search onChange={onChange}/>
-//     );
-
-//     fireEvent.change(screen.getByRole('textbox'), {
-//         target: { value: 'Uzbekistan' },
-//     });
-
-//     expect(onChange).toHaveBeenCalledTimes(1);
-// });

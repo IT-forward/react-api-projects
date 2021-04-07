@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function Form(props) {
+export default function Form({ onSubmit, query, setQuery }) {
   return (
-    <form className="form" onSubmit={props.onSubmit}>
+    <form className="form" onSubmit={onSubmit}>
       <label htmlFor="query" className="label">
         <h3>Movie Name</h3>
       </label>
@@ -11,8 +11,8 @@ export default function Form(props) {
         type="text"
         name="query"
         placeholder="i.e. Harry Potter"
-        value={props.query}
-        onChange={(e) => props.onChange(e.target.value)}
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
       ></input>
       <button className="button" type="submit">
         Search

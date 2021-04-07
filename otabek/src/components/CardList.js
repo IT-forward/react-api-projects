@@ -1,10 +1,10 @@
 import React from "react";
 import MovieCard from "./MovieCard";
 
-export default function CardList(props) {
+export default function CardList({ movies }) {
   return (
     <div className="card-list">
-      {props.movies
+      {movies
         .filter((movie) => movie.poster_path)
         .map((movie) => (
           <MovieCard

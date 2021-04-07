@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Form from "./Form";
 import CardList from "./CardList";
 
-export default function SearchMovies() {
+export default function SearchMovies(props) {
   const [query, setQuery] = useState("");
   const [movies, setMovies] = useState([]);
 
@@ -22,7 +22,7 @@ export default function SearchMovies() {
 
   return (
     <>
-      <Form onSubmit={searchMovies} query={query} onChange={setQuery} />
+      <Form onSubmit={searchMovies} query={query} setQuery={setQuery} />
       <CardList movies={movies} />
     </>
   );
