@@ -19,6 +19,10 @@ describe("SearchMovies", () => {
     const onSubmit = jest.fn();
     const setQuery = jest.fn();
 
+    onSubmit.mockImplementation((event) => {
+      event.preventDefault();
+    });
+
     render(<Form onSubmit={onSubmit} setQuery={setQuery} />);
 
     fireEvent.change(screen.getByRole("textbox"), {
@@ -30,15 +34,10 @@ describe("SearchMovies", () => {
     expect(onSubmit).toHaveBeenCalled();
   });
 
-  test("calls the onChange callback function", () => {
-    const setQuery = jest.fn();
-
-    render(<Form setQuery={setQuery} />);
-
-    fireEvent.change(screen.getByRole("textbox"), {
-      target: { value: "Harry Potter" },
-    });
-
-    expect(setQuery).toHaveBeenCalled();
-  });
+  // test("works with async/await", async () => {
+  //   render(<SearchMovies />);
+  //   // expect.searchMovies(1);
+  //   expect(SearchMovies).toContain(URL);
+  //   const data = await fetch(URL);
+  // });
 });
