@@ -1,36 +1,44 @@
+import * as React from "react";
+import * as ReactDOM from "react-dom";
 import SearchMovies from "./SearchMovies";
 import { fireEvent, render, screen } from "@testing-library/react";
 import Form from "./Form";
 
 describe("SearchMovies", () => {
-  test("initial query should be empty string", () => {
+  test("should render the correct h1", () => {
+    const root = document.createElement("div");
+    ReactDOM.render(<SearchMovies />, root);
+
+    expect(root.querySelector("h1").textContent).toBe("React Movie Search");
+  });
+  test("initial query should be an empty string", () => {
     render(<SearchMovies />);
     const input = screen.getByRole("textbox");
     expect(input.value).toBe("");
   });
 
-  test("initial movies should be empty array", () => {
+  test("initial movies should be an empty array", () => {
     render(<SearchMovies />);
     const card = screen.queryByText("RELEASE DATE");
     expect(card).toBe(null);
   });
 
-  test("calls the onSubmit callback function", () => {
+  test("calls the onSubmit callback function properly", () => {
     const onSubmit = jest.fn();
-    const setQuery = jest.fn();
+    const onChange = jest.fn();
 
     onSubmit.mockImplementation((event) => {
       event.preventDefault();
     });
 
-    render(<Form onSubmit={onSubmit} setQuery={setQuery} />);
+    render(<Form onSubmit={onSubmit} onChange={onChange} />);
 
     fireEvent.change(screen.getByRole("textbox"), {
       target: { value: "Star Wars" },
     });
     fireEvent.click(screen.getByRole("button"));
 
-    expect(setQuery).toHaveBeenCalled();
+    expect(onChange).toHaveBeenCalled();
     expect(onSubmit).toHaveBeenCalled();
   });
 

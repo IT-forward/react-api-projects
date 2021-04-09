@@ -22,7 +22,8 @@ export default function SearchMovies(props) {
 
   return (
     <>
-      <Form onSubmit={searchMovies} query={query} setQuery={setQuery} />
+      <h1 className="title">React Movie Search</h1>
+      <Form onSubmit={searchMovies} query={query} onChange={setQuery} />
       <CardList movies={movies} />
     </>
   );
