@@ -11,9 +11,13 @@ it("renders without crashing", () => {
   render(<App />);
 });
 
-it("renders App component with search", () => {
+it("renders App component with headers and search", () => {
   render(<App />);
 
+  expect(screen.getByText('COVID-19 Statistics')).toBeInTheDocument();
+
   expect(screen.getByPlaceholderText('Search a country')).toBeInTheDocument();
+
+  expect(screen.getByText('Statistics by country')).toBeInTheDocument();
 }); 
 

@@ -21,8 +21,8 @@ describe('Search', () => {
         render(<Search />);
 
         const input = screen.getByRole('textbox');
-        UserEvent.type(input, 'Uzbekistan');
+        UserEvent.type(input, 'uzb');
 
-        expect(input.value).toBe('Uzbekistan');
+        expect(input.value).toBe('uzb');
     });
 })
