@@ -7,7 +7,7 @@ import Sunny from './Icons/Sunny';
 import PropTypes from 'prop-types';
 
 DesIcon.propTypes = {
-    Description: PropTypes.string.isRequired,
+    Description: PropTypes.string,
 }
 
 function DesIcon(props) {

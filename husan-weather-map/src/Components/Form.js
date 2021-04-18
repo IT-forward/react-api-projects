@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
-// Form.propTypes = {
-//     handleSubmit: PropTypes.func.isRequired,
-// }
+Form.propTypes = {
+    handleSubmit: PropTypes.func,
+}
 
 function Form(props) {
-    const [inputValue, setInputValue] = useState(null);
+    const [inputValue, setInputValue] = useState('');
 
     const handleChange = ({ target }) => {
         const { value } = target;

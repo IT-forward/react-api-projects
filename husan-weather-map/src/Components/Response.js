@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import DesIcon from './DesIcon';
 
 Response.propTypes = {
-    cityName: PropTypes.string.isRequired,
+    cityName: PropTypes.string,
 }
 
 function Response(props) {
@@ -38,7 +38,7 @@ function Response(props) {
 
     return (
         <div className="d-flex justify-content-center w-50 mx-auto mt-5">
-            <div className="d-flex flex-column align-items-center">
+            <div className="d-flex flex-column align-items-center" data-testid="weather-info-div">
                 <h1 className="text-danger text-center">{cityName}</h1>
                 <h1 className="text-secondary text-center">{temp}</h1>
                 <h2 className="text-secondary text-center">{description}</h2>

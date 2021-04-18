@@ -9,10 +9,10 @@ describe('<Header />', () => {
         expect(heading.textContent).not.toHaveLength(0);
     });
 
-    // test('heading should the same excatly text', () => {
-    //     render(<Header />);
-    //     const heading = screen.getByTestId('custom-element');
+    test('heading should the same excatly text', () => {
+        render(<Header />);
+        const heading = screen.getByTestId('custom-element');
 
-    //     expect(heading.textContent).toBe('OpenWeather Map');
-    // });
+        expect(heading.textContent).toBe('OpenWeather Map');
+    });
 });
