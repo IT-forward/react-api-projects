@@ -27,7 +27,7 @@ const CardTop = () => {
             <Card bg='secondary' text={'white'} className='text-center' style={{ margin: '10px' }}>
                 <Card.Body>
                     <Card.Title>Cases</Card.Title>
-                    <Card.Text>
+                    <Card.Text data-testid="cases-n">
                         {global.cases}
                     </Card.Text>
                 </Card.Body>
@@ -38,7 +38,7 @@ const CardTop = () => {
             <Card bg="danger" text={'white'} className='text-center' style={{ margin: '10px' }}>
                 <Card.Body>
                     <Card.Title>Deaths</Card.Title>
-                    <Card.Text>
+                    <Card.Text data-testid="deaths-n">
                         {global.deaths}
                     </Card.Text>
                 </Card.Body>
@@ -49,7 +49,7 @@ const CardTop = () => {
             <Card bg='success' text={'white'} className='text-center' style={{ margin: '10px' }}>
                 <Card.Body>
                     <Card.Title>Recovered</Card.Title>
-                    <Card.Text>
+                    <Card.Text data-testid="recovered-n">
                         {global.recovered}
                     </Card.Text>
                 </Card.Body>
