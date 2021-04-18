@@ -1,0 +1,23 @@
+#app-width {
+    width: 60%;
+}
+
+#form-btn {
+    
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+    #app-width {
+        width: 80%;
+    }
+}
+
+@media (max-width: 425px) {
+    #app-width {
+        width: 100%;
+    }
+
+    #form-btn {
+        margin-top: 10px;
+    }
+}
